@@ -1,0 +1,154 @@
+.variants {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 30px;
+
+    color: #4f5056;
+    font-family: $font-oswald-400;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .variants__all {
+    display: block;
+
+    color: #4f5056;
+    font-family: $font-os-400;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .variants__list {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none;
+  }
+
+  .variants__item {
+    position: relative;
+
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 3px solid #bfc9cd;
+
+    img {
+      width: 346px;
+      height: 260px;
+      margin-bottom: 40px;
+    }
+
+    .name {
+      margin: 0;
+      margin-bottom: 20px;
+
+      color: #4f5056;
+      font-family: $font-os-600;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    .price__wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      margin: 0;
+      margin-right: 5px;
+
+      color: #69709b;
+      font-family: $font-oswald-400;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+
+    .old-price {
+      margin: 0;
+
+      color: #aeafaf;
+      font-family: $font-oswald-300;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 30px;
+      text-decoration: line-through;
+    }
+
+    button {
+      padding: 13px 33px;
+      display: flex;
+      margin-bottom: 20px;
+
+      color: #ffffff;
+      font-family: $font-os-400;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 13.45px;
+      text-transform: uppercase;
+
+      border-radius: 19px;
+      background-color: #69709b;
+
+      &::after {
+        content: "";
+
+        display: block;
+        width: 19px;
+        height: 14px;
+        margin-left: 5px;
+
+        background-image: url("../img/cart-white.svg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &:hover {
+        background-color: #f68c31;
+      }
+    }
+
+    .new {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+
+      width: 44px;
+      height: 44px;
+
+      color: #ffffff;
+      font-family: $font-oswald-400;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 46px;
+      text-transform: uppercase;
+      text-align: center;
+
+      background-color: #00c47d;
+      border-radius: 50%;
+    }
+  }
+}

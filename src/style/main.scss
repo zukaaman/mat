@@ -2,3 +2,29 @@
 * Custom
 */
 @import "../../node_modules/normalize.css/normalize";
+
+@import "../../node_modules/animate.css/animate";
+
+@import "partials/fonts";
+
+@import "partials/var";
+
+@import "partials/body";
+
+@import "partials/header";
+
+@import "partials/top";
+
+@import "partials/mat";
+
+@import "partials/description";
+
+@import "partials/variants";
+
+@import "partials/subscribe";
+
+@import "partials/footer";
+
+@import "../../node_modules/owl.carousel/dist/assets/owl.carousel.scss";
+
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.scss";
