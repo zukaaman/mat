@@ -2,6 +2,10 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
+  background-image: url("../img/variants-bg.png");
+  background-position: 96% 96%;
+  background-repeat: no-repeat;
+
   @include mobile {
     display: none;
   }

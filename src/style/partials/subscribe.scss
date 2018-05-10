@@ -11,7 +11,12 @@
   @include mobile {
     padding-top: 20px;
 
-    background-position: top left;
+    background-image: url("../img/variants-bg.png"),
+                      url("../img/subscribe-bg.jpg");
+    background-position: 96% 96%,
+                         top left;
+    background-repeat: no-repeat,
+                       no-repeat;
   }
 
   h2 {

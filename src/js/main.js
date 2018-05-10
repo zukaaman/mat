@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   //= ../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js
 
+  //= partials/toggle.js
+
   //= partials/slider.js
 
   //= partials/gallery.js

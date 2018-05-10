@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.description__image').viewportChecker({
+  $('.description__image img').viewportChecker({
     classToAdd: 'animated slideInRight',
     classToAddForFullView: 'full-visible'
   });
