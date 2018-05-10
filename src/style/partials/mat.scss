@@ -370,11 +370,21 @@
       }
 
       .color-name {
+        display: none;
+
         color: #4f5056;
         font-family: $font-os-400;
         font-size: 16px;
         font-weight: 400;
         line-height: 28px;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+
+      .active {
+        display: block;
       }
     }
 

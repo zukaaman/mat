@@ -9,6 +9,8 @@ $(document).ready(function() {
       label = $('.color--labels label');
 
   $('.image-1').addClass('active');
+  $('.color-name-1').addClass('active');
+  $('.color-name-4').addClass('active');
 
   $('label[for="mat-color-1"]').click(function() {
 
@@ -18,6 +20,10 @@ $(document).ready(function() {
       $('.image-4').removeClass('active');
       $('.image-5').removeClass('active');
       $('.image-6').removeClass('active');
+
+      $('.color-name-1').addClass('active');
+      $('.color-name-2').removeClass('active');
+      $('.color-name-3').removeClass('active');
 
   });
 
@@ -30,6 +36,10 @@ $(document).ready(function() {
       $('.image-5').removeClass('active');
       $('.image-6').removeClass('active');
 
+      $('.color-name-1').removeClass('active');
+      $('.color-name-2').addClass('active');
+      $('.color-name-3').removeClass('active');
+
   });
 
   $('label[for="mat-color-3"]').click(function() {
@@ -40,6 +50,10 @@ $(document).ready(function() {
       $('.image-4').removeClass('active');
       $('.image-5').removeClass('active');
       $('.image-6').removeClass('active');
+
+      $('.color-name-1').removeClass('active');
+      $('.color-name-2').removeClass('active');
+      $('.color-name-3').addClass('active');
 
   });
 
@@ -52,6 +66,10 @@ $(document).ready(function() {
       $('.image-5').removeClass('active');
       $('.image-6').removeClass('active');
 
+      $('.color-name-4').addClass('active');
+      $('.color-name-5').removeClass('active');
+      $('.color-name-6').removeClass('active');
+
   });
 
   $('label[for="mat-color-5"]').click(function() {
@@ -62,6 +80,10 @@ $(document).ready(function() {
       $('.image-4').removeClass('active');
       $('.image-5').addClass('active');
       $('.image-6').removeClass('active');
+
+      $('.color-name-4').removeClass('active');
+      $('.color-name-5').addClass('active');
+      $('.color-name-6').removeClass('active');
 
   });
 
@@ -74,7 +96,10 @@ $(document).ready(function() {
       $('.image-5').removeClass('active');
       $('.image-6').addClass('active');
 
-  });
+      $('.color-name-4').removeClass('active');
+      $('.color-name-5').removeClass('active');
+      $('.color-name-6').addClass('active');
 
+  });
 
 });
