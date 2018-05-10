@@ -7,7 +7,8 @@ $(document).ready(function(){
     autoplay:true,
     autoplayTimeout:3000,
     navText : ["",""],
-    rewind:true
+    rewind:true,
+    loop:false,
   });
 
   var owl = $(".owl-carousel");

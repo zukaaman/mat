@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   //= partials/slider.js
 
+  //= partials/gallery.js
+
   //= partials/count.js
 
   //= partials/viewportchecker.js

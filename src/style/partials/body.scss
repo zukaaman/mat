@@ -24,6 +24,16 @@ a {
 .container {
   margin: 0 auto;
   max-width: 1160px;
+
+  @include old-desktop {
+    max-width: 96%;
+    padding: 0 2%;
+    margin: 0;
+  }
+
+  @include mobile {
+    margin: 0;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active),

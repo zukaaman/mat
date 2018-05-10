@@ -1,4 +1,13 @@
 .mat {
+  position: relative;
+
+  @include tablet-landscape {
+    padding-top: 100px;
+  }
+
+  @include mobile {
+    padding-top: 150px;
+  }
 
   h2 {
     position: relative;
@@ -14,6 +23,19 @@
     text-transform: uppercase;
     text-align: center;
 
+    @include tablet-landscape {
+      position: absolute;
+      top: -35px;
+      left: calc((100% - 478px) / 2);
+    }
+
+    @include mobile {
+      top: 15px;
+      left: calc((100% - 255px)/ 2);
+
+      font-size: 30px;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -24,6 +46,18 @@
       height: 5px;
 
       background-color: #68c5b3;
+
+      @include mobile {
+        bottom: -10px;
+      }
+    }
+
+    br {
+      display: none;
+
+      @include mobile {
+        display: inline-block;
+      }
     }
   }
 
@@ -39,13 +73,38 @@
     text-align: center;
   }
 
+  .art {
+
+    @include tablet-landscape {
+      position: absolute;
+      top: 46px;
+      left: calc((100% - 120px)/ 2);
+    }
+
+    @include mobile {
+      top: 115px;
+      left: calc((100% - 100px)/ 2);
+
+      font-size: 15px;
+    }
+  }
+
   form {
     display: flex;
     justify-content: space-between;
+
+    @include tablet-landscape {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .mat__image {
     margin-right: 20px;
+
+    @include tablet-landscape {
+      margin-right: 0;
+    }
   }
 
   .mat__img-wrapper {
@@ -59,9 +118,16 @@
 
     box-sizing: border-box;
 
+    @include mobile {
+      padding: 40px 10px 70px 10px;
+      width: 290px;
+      margin: 0 auto 10px auto;
+    }
+
     img {
-      width: 334px;
-      height: 251px;
+      width: 100%;
+      height: auto;
+      display: none;
 
       object-fit: contain;
     }
@@ -81,6 +147,16 @@
     height: 176px;
     margin-left: 48px;
 
+    @include tablet-landscape {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      width: 290px;
+      height: 152px;
+      margin-left: 0;
+    }
+
     .slider__item {
       padding: 33px 10px 36px 18px;
       margin-right: 15px;
@@ -89,6 +165,13 @@
       background-color: #ffffff;
 
       box-sizing: border-box;
+
+      @include mobile {
+        margin-right: 10px;
+        width: 132px !important;
+        height: 152px !important;
+        padding: 20px 5px 20px 5px;
+      }
 
       img {
         width: 133px;
@@ -101,11 +184,27 @@
     .owl-item {
       width: 161px !important;
       height: 176px !important;
+
+      @include mobile {
+        width: 140px !important;
+        height: 152px !important;
+      }
+    }
+  }
+
+  .owl-carousel .owl-stage-outer {
+
+    @include mobile {
+      height: 152px;
     }
   }
 
   .owl__nav {
     position: relative;
+
+    @include mobile {
+      display: none;
+    }
 
     .owl__prev,
     .owl__next {
@@ -126,6 +225,10 @@
 
   .mat__choose {
     flex-grow: 1;
+
+    @include tablet-landscape {
+      width: 100%;
+    }
   }
 
   .mat__choose--top {
@@ -134,7 +237,7 @@
 
     background-color: #f2f5f6;
 
-    p {
+    & > p {
       margin: 0;
       margin-bottom: 20px;
 
@@ -143,6 +246,18 @@
       font-size: 24px;
       font-weight: 400;
       line-height: 28px;
+
+      @include mobile {
+        font-size: 20px;
+      }
+
+      &:first-child {
+        margin-bottom: 0;
+
+        @include mobile {
+          display: none;
+        }
+      }
 
       span {
         text-transform: uppercase;
@@ -156,6 +271,11 @@
       margin-bottom: 30px;
 
       background-color: #d2dbdd;
+
+      @include mobile {
+        width: 100%;
+        margin-bottom: 10px;
+      }
     }
 
     .color {
@@ -163,18 +283,31 @@
       // justify-content: space-around;
       align-items: center;
 
+      @include mobile {
+        flex-direction: column;
+      }
+
       &:last-child {
 
         label {
           padding-top: 7px;
           margin-top: 20px;
           margin-bottom: 30px;
+
+          @include mobile {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
         }
       }
     }
 
     .color--text {
       flex-basis: 50%;
+
+      @include old-desktop {
+        flex-basis: 40%;
+      }
 
       p {
         margin: 0;
@@ -186,6 +319,20 @@
         font-weight: 600;
         line-height: 28px;
         text-align: left;
+
+        @include old-desktop {
+          margin-left: 15%;
+        }
+
+        @include mobile {
+          margin: 0;
+
+          text-align: center;
+
+          &:last-child {
+            margin-bottom: 10px;
+          }
+        }
       }
 
       .color-name {
@@ -200,6 +347,15 @@
     .color--labels {
       display: flex;
       flex-basis: 50%;
+
+      @include old-desktop {
+        flex-basis: 60%;
+        justify-content: space-evenly;
+      }
+
+      @include mobile {
+        margin-bottom: 20px;
+      }
 
       label {
         width: 75px;
@@ -221,10 +377,6 @@
           margin-right: 0;
         }
       }
-
-      .active {
-        border: 3px solid #adb7ba;
-      }
     }
   }
 
@@ -235,6 +387,18 @@
     padding: 30px 20px 40px 20px;
 
     background-color: #f2f5f6;
+
+    @include old-desktop {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-itens: center;
+      padding: 15px 20px 20px 20px;
+    }
 
     button {
       padding: 15px 35px;
@@ -268,6 +432,15 @@
   }
 
   .pricing {
+
+    @include old-desktop {
+      margin-right: 50px;
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+    }
 
     p {
       margin: 0;
@@ -305,6 +478,10 @@
 
   .quantity {
     position: relative;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
 
     .minus,
     .plus {
@@ -377,4 +554,85 @@
       box-sizing: border-box;
     }
   }
+}
+
+#mat-color-1:checked ~ .mat__choose label[for="mat-color-1"],
+#mat-color-2:checked ~ .mat__choose label[for="mat-color-2"],
+#mat-color-3:checked ~ .mat__choose label[for="mat-color-3"],
+#mat-color-4:checked ~ .mat__choose label[for="mat-color-4"],
+#mat-color-5:checked ~ .mat__choose label[for="mat-color-5"],
+#mat-color-6:checked ~ .mat__choose label[for="mat-color-6"] {
+  border: 3px solid #adb7ba;
+}
+
+#mat-color-1:checked ~ .mat__image img:nth-of-type(1) {
+  display: block;
+}
+
+#mat-color-1:checked ~ .mat__image img:nth-of-type(2) {
+  display: none;
+}
+
+#mat-color-1:checked ~ .mat__image img:nth-of-type(3) {
+  display: none;
+}
+
+#mat-color-2:checked ~ .mat__image img:nth-of-type(1) {
+  display: none;
+}
+
+#mat-color-2:checked ~ .mat__image img:nth-of-type(2) {
+  display: block;
+}
+
+#mat-color-2:checked ~ .mat__image img:nth-of-type(3) {
+  display: none;
+}
+
+#mat-color-3:checked ~ .mat__image img:nth-of-type(1) {
+  display: none;
+}
+
+#mat-color-3:checked ~ .mat__image img:nth-of-type(2) {
+  display: none;
+}
+
+#mat-color-3:checked ~ .mat__image img:nth-of-type(3) {
+  display: block;
+}
+
+#mat-color-4:checked ~ .mat__image img:nth-of-type(1) {
+  display: block;
+}
+
+#mat-color-4:checked ~ .mat__image img:nth-of-type(2) {
+  display: none;
+}
+
+#mat-color-4:checked ~ .mat__image img:nth-of-type(3) {
+  display: none;
+}
+
+#mat-color-5:checked ~ .mat__image img:nth-of-type(1) {
+  display: none;
+}
+
+#mat-color-5:checked ~ .mat__image img:nth-of-type(2) {
+  display: block;
+}
+
+#mat-color-5:checked ~ .mat__image img:nth-of-type(3) {
+  display: none;
+}
+
+#mat-color-6:checked ~ .mat__image img:nth-of-type(1) {
+  display: none;
+}
+
+#mat-color-6:checked ~ .mat__image img:nth-of-type(2) {
+  display: none;
+}
+
+#mat-color-6:checked ~ .mat__image img:nth-of-type(3) {
+  display: block;
 }

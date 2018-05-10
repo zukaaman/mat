@@ -26,16 +26,18 @@
 
           <form id="data" action="#">
 
-            <input class="visually-hidden" type="radio" name="toggle" id="mat-color-1" checked>
-            <input class="visually-hidden" type="radio" name="toggle" id="mat-color-2">
-            <input class="visually-hidden" type="radio" name="toggle" id="mat-color-3">
-            <input class="visually-hidden" type="radio" name="toggle" id="mat-color-4">
-            <input class="visually-hidden" type="radio" name="toggle" id="mat-color-5">
-            <input class="visually-hidden" type="radio" name="toggle" id="mat-color-6">
+            <input class="visually-hidden" type="radio" name="toggle1" id="mat-color-1">
+            <input class="visually-hidden" type="radio" name="toggle1" id="mat-color-2" checked>
+            <input class="visually-hidden" type="radio" name="toggle1" id="mat-color-3">
+            <input class="visually-hidden" type="radio" name="toggle2" id="mat-color-4" checked>
+            <input class="visually-hidden" type="radio" name="toggle2" id="mat-color-5">
+            <input class="visually-hidden" type="radio" name="toggle2" id="mat-color-6">
 
             <div class="mat__image">
               <div class="mat__img-wrapper">
                 <img  src="img/mat.jpg" width="334" height="251" alt="#">
+                <img  src="img/mat1.jpg" width="334" height="251" alt="#">
+                <img  src="img/mat2.jpg" width="334" height="251" alt="#">
 
                 <a data-fancybox data-width="346" data-height="260" href="img/mat.jpg">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29" height="29" viewBox="0 0 29 29"><defs><path id="evtda" d="M760.01 860a13 13 0 1 1 0-26 13 13 0 0 1 0 26zm0-23a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm3.99 11h-3v3a1 1 0 1 1-2 0v-3h-3a1 1 0 0 1 0-2h3v-3a1 1 0 0 1 2 0v3h3a1 1 0 0 1 0 2z"/></defs><g><g clip-path="url(#clip-2922)" transform="translate(-746 -832)"><use fill="#d7e0e3" xlink:href="#evtda"/></g></g></svg>
@@ -68,7 +70,7 @@
                   </a>
                 </div>
 
-                <div class="slider__item">
+                <!-- <div class="slider__item">
                   <a data-fancybox="gallery" width="334" height="251" href="img/mat1.jpg">
                     <img data-fancybox="gallery" width="334" height="251" src="img/mat1.jpg" width="133" height="99" alt="#">
                   </a>
@@ -78,7 +80,7 @@
                   <a data-fancybox="gallery" width="334" height="251" href="img/mat2.jpg">
                     <img data-fancybox="gallery" width="334" height="251" src="img/mat2.jpg" width="133" height="99" alt="#">
                   </a>
-                </div>
+                </div> -->
 
               </div>
 
@@ -96,11 +98,12 @@
 
             <div class="mat__choose">
 
-              <h2>mat intense masāžas paklājiņš</h2>
-              <p>Art.: 0068356562</p>
+              <h2>mat intense masāžas<br> paklājiņš</h2>
+              <p class="art">Art.: 0068356562</p>
 
               <div class="mat__choose--top">
-                <p><span>Mat intense</span> masāžas paklājiņš<br> Izvēlies savu krāsu:</p>
+                <p><span>Mat intense</span> masāžas paklājiņš</p>
+                <p>Izvēlies savu krāsu:</p>
 
                 <div class="line"></div>
 
@@ -179,12 +182,76 @@
             <ul class="description__tabs">
               <li>
                 <p>Apraksts</p>
+
+                <div class="description__block-wrapper">
+                  <h3>mat intense masāžas paklājiņš</h3>
+                  <h4>Miega traucējuma gadījumos</h4>
+                  <p>Mūsdienu dzīves ritms neļauj mums atslābināties un "atslēgties" no apkārtējās pasaules pat naktī. Stress un nervu spriedze izjauc mūsu organisma normālo darbību un rada miega traucējumus, un tas savukārt liedz mums pilnvērtīgu atpūtu, kura ir tik nepieciešama mums visiem.</p>
+
+                  <p class="list__title">Labam garastāvoklim un veselīgam miegam:</p>
+
+                  <div class="list__wrapper">
+                    <ul>
+                      <li>Palīdz ātrāk iemigt.</li>
+                      <li>Miegs ir dziļāks.</li>
+                      <li>Noņem nemieru un stresu.</li>
+                    </ul>
+
+                    <ul>
+                      <li>Palīdz atslābināties.</li>
+                      <li>Pamošanās ir patīkamāka.</li>
+                      <li>Uzlabo miega kvalitāti.</li>
+                    </ul>
+                  </div>
+
+                  <div class="downloads__wrapper">
+                    <div>
+                      <img src="img/pdf.png" width="35" height="47" alt="#">
+                      <div class="text__wrapper">
+                        <p>Mat Intense specifikācija un pielietojums</p>
+                        <p>mat_specification_ENG.pdf</p>
+                      </div>
+                      <button type="button"></button>
+                    </div>
+
+                    <div>
+                      <img src="img/doc.png" width="35" height="47" alt="#">
+                      <div class="text__wrapper">
+                        <p>Mat tehniskais apraksts</p>
+                        <p>mat_specification_ENG.doc</p>
+                      </div>
+                      <button type="button"></button>
+                    </div>
+                  </div>
+
+                  <img class="img" src="img/description-mobile.jpg" alt="#">
+                </div>
               </li>
               <li>
                 <p>Video galerija</p>
+
+                <div class="description__block-wrapper">
+                  <video autoplay="" poster="" loop="" class="stopfade">
+                    <source src="http://mattweb.ru/demo/video-bg/img/350949661.webm" type="video/webm">
+                    <source src="http://mattweb.ru/demo/video-bg/img/350949661.mp4" type="video/mp4">
+                    Тег video не поддерживается вашим браузером.
+                    <a href="#">Скачайте видео</a>.
+                  </video>
+                </div>
               </li>
               <li>
                 <p>Cita informācija</p>
+
+                <div class="description__block-wrapper">
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam repellat dolorem rem, totam sequi mollitia beatae labore quisquam nisi illum delectus officia. Laudantium ad voluptas quo pariatur eligendi fuga. Rerum.</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel architecto, delectus aperiam debitis, molestiae eum minima quisquam, et possimus vitae nam. Qui natus totam in iste perspiciatis sapiente, voluptatem id!</p>
+
+                  <ul>
+                    <li>Palīdz atslābināties.</li>
+                    <li>Pamošanās ir patīkamāka.</li>
+                    <li>Uzlabo miega kvalitāti.</li>
+                  </ul>
+                </div>
               </li>
             </ul>
 
@@ -217,9 +284,7 @@
                       <p>Mat Intense specifikācija un pielietojums</p>
                       <p>mat_specification_ENG.pdf</p>
                     </div>
-                    <button type="button">
-                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30"><defs><path id="b0lra" d="M274.5 2041a13.5 13.5 0 1 1 0 27 13.5 13.5 0 0 1 0-27z"/><clipPath id="b0lrb"><use fill="#fff" xlink:href="#b0lra"/></clipPath></defs><g><g transform="translate(-259 -2039)"><use fill="#dae2e4" xlink:href="#b0lra"/><use fill="#fff" fill-opacity="0" stroke="#bfc9cd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#b0lrb&quot;)" xlink:href="#b0lra"/></g><g transform="translate(-259 -2039)"><image width="11" height="10" transform="translate(269 2051)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAABCUlEQVQoU22Qu0oDYRCFv/kV7Wy8gdhZRcFKtDAXdsUqm86XMJVgae0LWGzhM9iZ1ULNn8s2SloJYikImlQWioUzEolhA5nqcPhmmHOEzCQ+3QK7AFaAV5CDcpDv/CMyBtfbOwg1YAHoY0TlsHA/Eb68a207JwN4EeipWlTZKz5MhGvNZk7UeWAZeDOnQVQqdUfw37Up2cDoidm6IScIcxgfgp0qPIqTJfvRJ0l8OwLOgFVAgdlMju+hfjfhWLz30186E5rTGFjLBh7qFzM7/OzP34zauPZpXrFzIJdZeDaoRkHhduCNVXdVb+2akxhjE+gqVCtBoTGxjYGZNNJ9Uz0C4igsJtm3fgGanGEyeu32FAAAAABJRU5ErkJggg=="/></g></g></svg>
-                    </button>
+                    <button type="button"></button>
                   </div>
 
                   <div>
@@ -228,9 +293,7 @@
                       <p>Mat tehniskais apraksts</p>
                       <p>mat_specification_ENG.doc</p>
                     </div>
-                    <button type="button">
-                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30"><defs><path id="b0lra" d="M274.5 2041a13.5 13.5 0 1 1 0 27 13.5 13.5 0 0 1 0-27z"/><clipPath id="b0lrb"><use fill="#fff" xlink:href="#b0lra"/></clipPath></defs><g><g transform="translate(-259 -2039)"><use fill="#dae2e4" xlink:href="#b0lra"/><use fill="#fff" fill-opacity="0" stroke="#bfc9cd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#b0lrb&quot;)" xlink:href="#b0lra"/></g><g transform="translate(-259 -2039)"><image width="11" height="10" transform="translate(269 2051)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAABCUlEQVQoU22Qu0oDYRCFv/kV7Wy8gdhZRcFKtDAXdsUqm86XMJVgae0LWGzhM9iZ1ULNn8s2SloJYikImlQWioUzEolhA5nqcPhmmHOEzCQ+3QK7AFaAV5CDcpDv/CMyBtfbOwg1YAHoY0TlsHA/Eb68a207JwN4EeipWlTZKz5MhGvNZk7UeWAZeDOnQVQqdUfw37Up2cDoidm6IScIcxgfgp0qPIqTJfvRJ0l8OwLOgFVAgdlMju+hfjfhWLz30186E5rTGFjLBh7qFzM7/OzP34zauPZpXrFzIJdZeDaoRkHhduCNVXdVb+2akxhjE+gqVCtBoTGxjYGZNNJ9Uz0C4igsJtm3fgGanGEyeu32FAAAAABJRU5ErkJggg=="/></g></g></svg>
-                    </button>
+                    <button type="button"></button>
                   </div>
                 </div>
               </div>
@@ -247,6 +310,12 @@
               <div class="description__block-wrapper">
                 <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam repellat dolorem rem, totam sequi mollitia beatae labore quisquam nisi illum delectus officia. Laudantium ad voluptas quo pariatur eligendi fuga. Rerum.</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel architecto, delectus aperiam debitis, molestiae eum minima quisquam, et possimus vitae nam. Qui natus totam in iste perspiciatis sapiente, voluptatem id!</p>
+
+                <ul>
+                  <li>Palīdz atslābināties.</li>
+                  <li>Pamošanās ir patīkamāka.</li>
+                  <li>Uzlabo miega kvalitāti.</li>
+                </ul>
               </div>
 
             </div>

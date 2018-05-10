@@ -14,6 +14,10 @@
     height: 2px;
 
     background-color: #dae2e4;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   .line__bottom {
@@ -26,6 +30,14 @@
     height: 2px;
 
     background-color: #dae2e4;
+
+    @include tablet-landscape {
+      bottom: 80px;
+    }
+
+    @include mobile {
+      bottom: 210px;
+    }
   }
 
   .description__tabs {
@@ -36,6 +48,11 @@
 
     list-style: none;
 
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: 60px;
+    }
+
     li {
       padding: 20px 50px;
 
@@ -43,6 +60,10 @@
       background-color: #69709b;
 
       cursor: pointer;
+
+      @include mobile {
+        padding: 10px;
+      }
 
       p {
         margin: 0;
@@ -52,6 +73,115 @@
         font-size: 22px;
         font-weight: 400;
         line-height: 28px;
+
+        @include tablet-landscape {
+          font-size: 18px;
+        }
+
+        @include mobile {
+          text-align: center;
+
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 34px;
+        }
+      }
+
+      .description__block-wrapper {
+
+        h3 {
+          margin-bottom: 10px;
+
+          color: #56c5af;
+          font-family: $font-oswald-400;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 30px;
+          text-transform: uppercase;
+        }
+
+        h4 {
+          margin-bottom: 20px;
+
+          color: #69709b;
+          font-family: $font-oswald-400;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 50px;
+        }
+
+        p {
+          margin-bottom: 20px;
+
+          color: #4f5056;
+          font-family: $font-os-400;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+          text-align: left;
+        }
+
+        .list__title {
+          margin-top: 0;
+
+          color: #4f5056;
+          font-family: $font-os-600;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+        }
+
+        .list__wrapper {
+          display: flex;
+          flex-direction: column;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+
+          list-style:none;
+
+          &:last-child {
+            margin-bottom: 30px;
+          }
+
+          li {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+
+            color: #4f5056;
+            font-family: $font-os-300;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 28px;
+
+            background-color: #ffffff;
+            border: 0;
+
+            &::before {
+              content: "";
+
+              display: block;
+              width: 11px;
+              height: 11px;
+              margin-right: 15px;
+
+              background-color: #68c5b3;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        .img {
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+
+          object-fit: contain;
+        }
       }
     }
 
@@ -61,6 +191,14 @@
       border: 2px solid #d4dcde;
       border-bottom: 0;
       background-color: #ffffff;
+
+      @include mobile {
+        border: 2px solid #d4dcde;
+
+        .description__block-wrapper {
+          display: block;
+        }
+      }
 
       &::after {
         content: "";
@@ -74,10 +212,18 @@
         background-image: url("../img/description-arrow.png");
         background-position: 0 0;
         background-repeat: no-repeat;
+
+        @include mobile {
+          top: 70px;
+        }
       }
 
       p {
         color: #69709b;
+
+        @include mobile {
+          margin-bottom: 50px;
+        }
       }
     }
   }
@@ -179,6 +325,14 @@
     min-height: 537px;
     margin-bottom: 30px;
 
+    @include tablet-landscape {
+      width: 100%;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
     .active {
       display: block;
     }
@@ -186,10 +340,22 @@
 
   .downloads__wrapper {
     display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
 
     & > div {
       display: flex;
+      justify-content: space-between;
       margin-right: 20px;
+      flex-basis: 50%;
+
+      @include mobile {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
 
       img {
         width: 35px;
@@ -198,6 +364,7 @@
       }
 
       .text__wrapper {
+        margin-right: auto;
 
         p:first-child {
           margin: 0;
@@ -223,8 +390,39 @@
     }
 
     button {
+      position: relative;
 
+      width: 27px;
+      height: 27px;
 
+      border: 2px solid #bfc9cd;
+      border-radius: 50%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 7.5px;
+        left: 5.5px;
+
+        width: 11px;
+        height: 10px;
+
+        background-image: url("../img/download-arrow.png");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+
+      &:hover {
+        background-color: #56c5af;
+        border: 0;
+
+        &::after {
+          top: 8.5px;
+          left: 7.5px;
+
+          background-image: url("../img/download-arrow-white.png");
+        }
+      }
     }
   }
 
@@ -232,11 +430,24 @@
     position: absolute;
     top: 160px;
     right: 0;
+
+    @include old-desktop {
+      width: 30%;
+    }
+
+    @include tablet-landscape {
+      display: none;
+    }
   }
 
   .links__wrapper {
     display: flex;
     justify-content: center;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
 
     a:first-child {
       display: flex;
@@ -254,6 +465,11 @@
       border-radius: 26px;
       border: 2px solid #d4dcde;
       background-color: #f2f5f6;
+
+      @include mobile {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
 
       &::before {
         content: "";
@@ -282,6 +498,10 @@
 
       border-radius: 26px;
       background-color: #4d71bc;
+
+      @include mobile {
+        margin-bottom: 50px;
+      }
 
       &::before {
         content: "";
